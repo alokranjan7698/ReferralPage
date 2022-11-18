@@ -1,13 +1,432 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --col1: #4D4D4D;
+  --col2: #800080;
+  --col2-fade: rgba(128, 0, 128, 0.250);
+  --col3: #000000;
+  --col4: #EEAEAE;
+}
+
+.navbar {
+  height: 73px;
+}
+
+.nav-brand {
+  height: 100%;
+}
+
+.nav-brand img {
+  height: 100%;
+}
+
+.navbar ul {
+  margin-bottom: 0 !important;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: var(--col2-fade);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.dark-color a {
+  color: var(--col2) !important;
+}
+
+.nav-right .fa-user {
+  font-size: 18px;
+  color: #fff;
+  background-color: var(--col2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  padding: 12px;
+  height: 20px;
+  width: 20px;
+  align-self: center;
+}
+
+.nav-right select {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--col2);
+  font-size: 20px;
+}
+
+.nav-refer {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+a {
+  color: #000;
+}
+
+a:hover {
+  color: var(--col2);
+}
+
+
+/* section 2 */
+.left-card {
+  box-shadow: 0px 3px 100px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.text-left-card {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--col2);
+  width: 100% !important;
+}
+
+.number-left-card {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+}
+
+.btn-withdraw {
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 20px;
+  background-color: var(--col2);
+  color: #fff;
+  border: none;
+  padding: 8px;
+  width: fit-content;
+}
+
+.referal-code-text {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--col2);
+}
+
+.referral-code {
+  color: var(--col2);
+  /* padding-left: 25px !important; */
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 1.5em;
+  position: relative;
+  display: flex !important;
+  justify-content: center;
+  padding: 8px 0;
+}
+
+.referral-code::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: linear-gradient(-90deg, #800080, #FF864C);
+  padding: 1px;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.how-it-work {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--col2);
+}
+
+.how-it-work-icon {
+  background-color: rgb(240, 240, 240);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.card-heading {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px
+}
+
+.card-para {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+.last-para {
+  color: var(--col2);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* 2nd Page */
+.go-back i {
+  font-size: 30px;
+}
+
+.referral-div-outer {
+  height: 9vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.referral-div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.your-referal-code-text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--col2);
+}
+
+.your-referral-code {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0.75em;
+  border: 1.5px solid #DFDFDF;
+  border-radius: 10px;
+  padding: 5px;
+  /* padding-left: 30px; */
+}
+
+.wallet-div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px rgba(128, 0, 128, 0.15);
+  border-radius: 20px;
+  padding: 5px 8px;
+}
+
+.wallet-balance-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--col2);
+}
+
+.wallet-balance {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.enrolled-friend {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.enrolled-friend span {
+  font-weight: 400;
+}
+
+
+
+.user-card-outer {
+  padding-top: 0;
+}
+
+.user-card {
+  position: relative;
+  padding: 0.5rem 1rem !important;
+  height: 200px;
+  background: linear-gradient(270deg, #800080 0%, #FF864C 100%);
+  border-radius: 20px;
+  color: #fff;
+}
+
+.user-name {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 !important;
+}
+
+.enroll-date {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 2px 0;
+}
+
+.course {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 6px;
+  border: 1.5px solid #EEAEAE;
+  border-radius: 20px;
+  margin-top: 5px;
+}
+
+.referral-amount {
+  position: absolute;
+  bottom: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.referral-amount span {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.span-go-back {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .btn-withdraw {
+    font-size: 13px;
+  }
+
+  .nav-right i {
+    display: none !important;
+  }
+
+  .navbar ul li a {
+    background-color: var(--col2);
+    color: #fff !important;
+    padding: 7px 10px;
+    border-radius: 19px;
+  }
+
+  .nav-right select {
+    color: #fff;
+    background-color: var(--col2);
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 5px 8px;
+  }
+
+  .user-card {
+    margin: 0 auto;
+  }
+
+  .user-card-container .user-card-outer:first-child {
+    margin-top: 0 !important;
+  }
+
+  .span-go-back {
+    display: flex;
+    align-items: center;
+  }
+
+  .span-go-back i {
+    font-size: 30px;
+    color: var(--col2);
+    font-weight: 700 !important;
+  }
+
+  .span-go-back a {
+    font-size: 17px;
+    color: var(--col2);
+  }
+}
+
+@media (max-width: 300px) {
+  .navbar {
+    height: 60px;
+  }
+
+  .navbar ul li a {
+    font-size: 11px;
+  }
+
+  .user-card {
+    height: 150px;
+  }
+
+  .user-name {
+    font-size: 10px;
+  }
+
+  .enroll-date {
+    font-size: 8px;
+  }
+
+  .enroll-course {
+    font-size: 10px;
+  }
+
+  .course {
+    font-size: 7px;
+  }
+
+  .referral-amount {
+    font-size: 10px;
+  }
+
+  .referral-amount span {
+    font-size: 11px;
+  }
+
+  .your-referal-code-text {
+    font-size: 11px;
+  }
+
+  .your-referral-code {
+    font-size: 11px;
+  }
+
+  .wallet-div {
+    padding: 5px 8px;
+  }
+
+  .wallet-balance-text {
+    font-size: 11px;
+  }
+
+  .wallet-balance {
+    font-weight: 500;
+    font-size: 11px;
+  }
+
+  .enrolled-friend {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 0 !important;
+  }
+
 }
